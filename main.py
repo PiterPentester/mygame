@@ -14,7 +14,7 @@ def init_game():
     aliens = Group()
     background = Background(screen)
     bullets = Group()
-    g_f.create_fleet(game_settings, screen, aliens)
+    g_f.create_fleet(game_settings, screen, aliens, ship)
     while True:
         g_f.check_events(game_settings, screen, ship, bullets)
         g_f.update_screen(background, ship, bullets, aliens, screen)
