@@ -10,10 +10,12 @@ def check_events(game_settings, screen, ship, bullets):
         elif event.type == pygame.KEYUP:
             check_keyup_events(event, ship)
 
-def update_screen(screen, game_settings, ship, bullets):
+def update_screen(background, ship, bullets, alien):
     pygame.display.flip()
-    screen.fill(game_settings.bg_color)
+    background.update()
+    #screen.fill(game_settings.bg_color)
     ship.blitme()
+    alien.blitme()
     for bullet in bullets.sprites():
         bullet.draw_bullet()
 
